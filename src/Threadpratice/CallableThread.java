@@ -2,7 +2,7 @@ package Threadpratice;
 
 import java.util.concurrent.Callable;
 
-public class CallableThread implements Callable {
+public class CallableThread implements Callable<Object> {
 
 	@Override
 	public Object call() throws Exception {

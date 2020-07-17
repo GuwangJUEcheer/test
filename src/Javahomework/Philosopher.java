@@ -6,11 +6,15 @@ public class Philosopher implements Runnable {
 	private ChopStick left;
 	private ChopStick right;
 	private Integer thinkFactor;
-	public Philosopher(String string, ChopStick chopStick, ChopStick chopStick2, int think) {
+	public Philosopher(String name, ChopStick left, ChopStick right, int thinkFactor) {
 		// TODO Auto-generated constructor stub
+		this.name=name;
+		this.left=left;
+		this.right=right;
+		this.thinkFactor=thinkFactor;
 	}
 	@Override
-	public void run() {
+	public synchronized void run() {
 		// TODO Auto-generated method stub
      while(!Thread.interrupted()) {
     	 try {
